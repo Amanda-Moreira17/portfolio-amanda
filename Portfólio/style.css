@@ -1,0 +1,179 @@
+/* Paleta de Cores */
+:root {
+    --bege: #D2BCA1; /* Akaroa */
+    --marrom-escuro: #6F481C; /* Walnut */
+    --marrom-medio: #7F715F; /* Sandstone */
+    --azul-detalhe: #273F5B; /* Rhino */
+    --laranja: #A76825; /* Desert */
+}
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bege);
+    color: var(--marrom-escuro);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+}
+
+/* Header */
+header {
+    background-color: var(--marrom-escuro);
+    color: var(--bege);
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    margin-bottom: 10px;
+    font-size: 2.5rem;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+nav ul li a {
+    color: var(--bege);
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: var(--azul-detalhe);
+}
+
+/* Conteúdo Principal */
+main {
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.sobre {
+    margin-bottom: 50px;
+}
+
+.sobre h2 {
+    color: var(--marrom-escuro);
+    margin-bottom: 10px;
+}
+
+.sobre p {
+    max-width: 700px;
+}
+
+/* Cards dos Projetos */
+.projetos h2 {
+    margin-bottom: 20px;
+}
+
+.cards {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background-color: var(--marrom-medio);
+    color: var(--bege);
+    padding: 20px;
+    border-radius: 10px;
+    flex: 1;
+    min-width: 280px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+}
+
+.card h3 {
+    margin-bottom: 10px;
+}
+
+.card p {
+    margin-bottom: 15px;
+}
+
+.card a {
+    background-color: var(--azul-detalhe);
+    color: var(--bege);
+    padding: 8px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.card a:hover {
+    background-color: var(--laranja);
+}
+
+/* Footer */
+footer {
+    background-color: var(--marrom-escuro);
+    color: var(--bege);
+    text-align: center;
+    padding: 15px;
+    margin-top: 50px;
+}
+.foto-perfil {
+    text-align: center;
+    margin: 30px 0;
+}
+
+.foto-perfil img {
+    width: 150px;       /* Tamanho médio */
+    height: auto;
+    border-radius: 100px; /* Deixa a imagem redonda */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    object-fit: cover;
+     transform: rotate(-30deg);
+}
+/* ——— Seção “competências” ——— */
+
+.competencias {
+    margin: 40px 0;            /* espaçamento acima/abaixo da seção */
+    text-align: center;
+    color: #273F5B;            /* cor do texto (Paleta Rhino) */
+}
+
+.competencias p {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+}
+
+/* Grade flexível para os ícones dos programas */
+.icones-programas {
+    display: flex;
+    flex-wrap: wrap;           /* quebra linha em telas menores */
+    justify-content: center;
+    gap: 25px;                 /* espaço entre ícones */
+}
+
+.icones-programas img {
+    width: 60px;               /* tamanho médio uniforme */
+    height: 60px;
+    object-fit: contain;
+    filter: grayscale(100%);   /* inicia em PB para efeito */
+    transition: transform 0.25s ease,
+                filter 0.25s ease;
+}
+
+/* Efeito “destacar” no hover */
+.icones-programas img:hover {
+    transform: scale(1.15);
+    filter: grayscale(0%);
+}
